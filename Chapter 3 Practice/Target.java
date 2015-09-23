@@ -15,14 +15,17 @@ public class Target
 {
     /** description of instance variable x (add comment for each instance variable) */
     private double radius;
-  
+    private int x;
+    private int y;
 
     /**
      * Default constructor for objects of class Target
      */
-    public Target(double radius)
+    public Target(double radius, int x, int y)
     {
         this.radius=radius;
+        this.x=x;
+        this.y=y;
     }
 
     /**
@@ -32,11 +35,11 @@ public class Target
      */
     public void draw(Graphics2D g2)
     {
-        Ellipse2D.Double circle1= new Ellipse2D.Double(250,250,this.radius+125,this.radius+125);
-        Ellipse2D.Double circle2= new Ellipse2D.Double(262.5,262.5,this.radius+100,this.radius+100);
-        Ellipse2D.Double circle3= new Ellipse2D.Double(275,275,this.radius+75,this.radius+75);
-        Ellipse2D.Double circle4= new Ellipse2D.Double(287.5,287.5,this.radius+50,this.radius+50);
-        Ellipse2D.Double circle5= new Ellipse2D.Double(300,300,this.radius+25,this.radius+25);
+        Ellipse2D.Double circle1= new Ellipse2D.Double(this.x,this.y,this.radius+125,this.radius+125);
+        Ellipse2D.Double circle2= new Ellipse2D.Double(this.x+12.5,this.y+12.5,this.radius+100,this.radius+100);
+        Ellipse2D.Double circle3= new Ellipse2D.Double(this.x+25,this.y+25,this.radius+75,this.radius+75);
+        Ellipse2D.Double circle4= new Ellipse2D.Double(this.x+37.5,this.y+37.5,this.radius+50,this.radius+50);
+        Ellipse2D.Double circle5= new Ellipse2D.Double(this.x+50,this.y+50,this.radius+25,this.radius+25);
         
         g2.setColor(Color.BLACK);
         g2.fill(circle1);
@@ -48,6 +51,7 @@ public class Target
         g2.fill(circle4);
         g2.setColor(Color.BLACK);
         g2.fill(circle5);
+        
     }
 
 }
