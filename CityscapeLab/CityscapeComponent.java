@@ -31,7 +31,12 @@ public class CityscapeComponent extends JComponent
         
         // invoke the draw method on each object in your Cityscape
         // ...
-        
+        Background background=new Background ();
+        background.draw(g2);
+        Building buildingSquare=new Building(50,50);
+        buildingSquare.draw(g2);
+        BuildingReflection buildingSquareReflection=new BuildingReflection(50,480);
+        buildingSquareReflection.draw(g2);
         
     }
     
@@ -45,9 +50,8 @@ public class CityscapeComponent extends JComponent
         // ...
         
         
-        
         // request that the Java Runtime repaints this component by invoking its paintComponent method
-        repaint();
+        
     }
 
 }
