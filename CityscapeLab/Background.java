@@ -23,7 +23,7 @@ public class Background
     public Background()
     {
         // initialise instance variables
-       this.w=800;
+       this.w=1300;
        this.h=800;
 
        

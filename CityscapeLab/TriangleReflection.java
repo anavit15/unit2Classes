@@ -1,13 +1,16 @@
 import java.awt.Rectangle;
 import java.awt.Graphics2D;
 import java.awt.Color;
+import java.awt.*;
+import java.applet.*;
+
 /**
- * Creates a rectangle building 
+ * Creates a tiered rectangle building 
  * 
  * Anavi Tekriwal 
  * @October 5
  */
-public class Building extends Background
+public class TriangleReflection extends Applet
 {
     /** Location of the top left x coordinate of the building */
     private int xLeft;
@@ -18,10 +21,11 @@ public class Building extends Background
     /** Height of the Building */
     private int yHeight;
 
+
     /**
-     * Constructor for object of class Building1 that specify the location of the building
+     * Constructor for object of class Building2 that specify the location of the building
      */
-    public Building(int x, int y,int w,int h)
+    public TriangleReflection(int x, int y, int w, int h)
     {
         // initialise instance variables
         xLeft= x;
@@ -40,12 +44,14 @@ public class Building extends Background
      *          yTop    the y coordinate of the top left corner of the building
 
      */
-    public void draw(Graphics2D g2)
+    public void draw(Graphics g)
     {
-        g2.setColor(Color.black);
-        
-        Rectangle building1=new Rectangle ( xLeft,yTop,xWidth,yHeight);
-        g2.fill(building1);
+       Color color =new Color(140,140, 140, 100);//lighter black
+       g.setColor(color);
+       int xs []={xLeft, xLeft+((int)(xWidth*.5)), xLeft+xWidth};
+       int ys []= {yTop,yTop+yHeight, yTop};
+       Polygon building3Part2Reflection= new Polygon (xs,ys, 3);
+       g.fillPolygon(building3Part2Reflection);
         
         
     }

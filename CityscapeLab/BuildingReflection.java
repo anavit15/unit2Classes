@@ -1,6 +1,7 @@
 import java.awt.Rectangle;
 import java.awt.Graphics2D;
 import java.awt.Color;
+import java.awt.Transparency;
 /**
  * Write a description of class Bulding here.
  * 
@@ -9,19 +10,26 @@ import java.awt.Color;
  */
 public class BuildingReflection extends Background
 {
-    /** description of instance variable x (add comment for each instance variable) */
+    /** Location of the top left x coordinate of the building */
     private int xLeft;
+    /** Location of the top left y coordinate of the building */
     private int yTop;
-
+    /** Width of the building */
+    private int xWidth;
+    /** Height of the Building */
+    private int yHeight;
     /**
      * Default constructor for objects of class Bulding
      */
-    public BuildingReflection(int x, int y)
+    public BuildingReflection(int x, int y,int w,int h)
     {
         // initialise instance variables
         xLeft= x;
         yTop=y;
+        xWidth=w;
+        yHeight=h;
     }
+    
 
     /**
      * An example of a method - replace this comment with your own
@@ -37,10 +45,11 @@ public class BuildingReflection extends Background
     public void draw(Graphics2D g2)
     {
         // put your code here
-        Color color =new Color(140,140,140);//lighter black
-        Rectangle buildingSquare=new Rectangle ( xLeft,yTop,75,430);
+        Color color =new Color(140,140, 140, 100);//lighter black
         g2.setColor(color);
-        g2.fill(buildingSquare);
+        Rectangle building=new Rectangle ( xLeft,yTop,xWidth,yHeight);
+        g2.fill(building);
+       
     }
 
 }
