@@ -26,8 +26,16 @@ public class CityscapeViewer
         
         // use the Scanner class to prompt the user for some configurable aspect of the cityscape
         // ...
-        
-        
+        /*System.out.println("Is the ferris wheel running (yes or no): ");
+        Scaner input=new Scanner(System.in);
+        String answer=input.next();
+        int answerValue=answer.indexOf("yes");
+        if (answerValue==1){
+            //animate the ferris wheel
+        }else{
+            //don't animate the ferris wheel
+        }*/
+      
         
         // a frame contains a single component; create the Cityscape component and add it to the frame
         CityscapeComponent component = new CityscapeComponent( /* pass the user-specified value */ );

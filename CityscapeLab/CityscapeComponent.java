@@ -14,11 +14,45 @@ public class CityscapeComponent extends JComponent
 {
     // define the objects in your Cityscape as instance variables
     // ...
-    
-    
+    private Line line1;
+    private Line line2;
+    private Line line3;
+    private Line line4;
+    private Building car1;
+    private Building car2;
+    private Building car3;
+    private Building car4;
+    private Building car5;
+    private Building car6;
+    private Building car7;
+    private Building car8;
     
     // define the CityscapeComponent contructor and intiailize all instance variables
     // ...
+   
+
+    /**
+     * Constructor for object of class Building1 that specify the location of the building
+     */
+    public CityscapeComponent()
+    {
+        // initialise instance variables
+      
+        this.line1=new Line (1020, 70, 1020, 425, 7); 
+        this.line2=new Line (845, 255, 1200, 255, 7);
+        this.line3=new Line (1152, 130, 900, 375, 7);
+        this.line4=new Line (890, 126, 1143, 378, 7);
+        
+        this.car1=new Building(1000,50,40,40); 
+        this.car2=new Building(1000,405,40,40);   
+        this. car3=new Building(825,235,40,40);
+        this.car4=new Building(1180,235,40,40);
+        this.car5=new Building(1132,110,40,40);
+        this.car6=new Building(880,355,40,40);
+        this.car7=new Building(870,106,40,40);
+        this.car8=new Building(1123,358,40,40);
+       
+    }
     
     
     /**
@@ -77,9 +111,9 @@ public class CityscapeComponent extends JComponent
         building5Part2Reflection.draw(g2);
         BuildingReflection building5Part3Reflection=new BuildingReflection(510,760,80,80);
         building5Part3Reflection.draw(g2);
-        BuildingReflection building5Part4Reflection=new BuildingReflection(530,800,10,50);
+        BuildingReflection building5Part4Reflection=new BuildingReflection(530,900,10,50);
         building5Part4Reflection.draw(g2);
-        BuildingReflection building5Part5Reflection=new BuildingReflection(555,800,10,50);
+        BuildingReflection building5Part5Reflection=new BuildingReflection(555,900,10,50);
         building5Part5Reflection.draw(g2);
     
         Building building5Part1=new Building(460,250,180,230);
@@ -130,13 +164,9 @@ public class CityscapeComponent extends JComponent
         LineReflection line4Reflection=new LineReflection (900, 840, 1168, 622, 7);
         line4Reflection.draw(g2);
         
-        Line line1=new Line (1020, 70, 1020, 425, 7);
         line1.draw(g2);
-        Line line2=new Line (845, 255, 1200, 255, 7);
         line2.draw(g2);
-        Line line3=new Line (1152, 130, 900, 375, 7);
         line3.draw(g2);
-        Line line4=new Line (890, 126, 1143, 378, 7);
         line4.draw(g2);
         
         BuildingReflection car1Reflection=new BuildingReflection(1000,530,40,40);
@@ -149,22 +179,14 @@ public class CityscapeComponent extends JComponent
         car4Reflection.draw(g2);
         BuildingReflection car5Reflection=new BuildingReflection(1148,602,40,40);
         car5Reflection.draw(g2);
-        
-        Building car1=new Building(1000,50,40,40);
+       
         car1.draw(g2);
-        Building car2=new Building(1000,405,40,40);
         car2.draw(g2);
-        Building car3=new Building(825,235,40,40);
         car3.draw(g2);
-        Building car4=new Building(1180,235,40,40);
         car4.draw(g2);
-        Building car5=new Building(1132,110,40,40);
-        car5.draw(g2);
-        Building car6=new Building(880,355,40,40);
+        car5.draw(g2);;
         car6.draw(g2);
-        Building car7=new Building(870,106,40,40);
         car7.draw(g2);
-        Building car8=new Building(1123,358,40,40);
         car8.draw(g2);
         
         CircleReflection wheelCenterReflection=new CircleReflection(10,1000,720);
