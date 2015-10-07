@@ -17,6 +17,19 @@ public class Line
    private int x2;
    private int y2;
    private float penWidth;
+   private Line line1;
+    private Line line2;
+    private Line line3;
+    private Line line4;
+    private Building car1;
+    private Building car2;
+    private Building car3;
+    private Building car4;
+    private Building car5;
+    private Building car6;
+    private Building car7;
+    private Building car8;
+    private Boolean mode;
     /**
      * Constructor for objects of class FilledCircle
      */
@@ -27,6 +40,7 @@ public class Line
         this.x2=x2;
         this.y2=y2;
         this.penWidth=w;
+        
     }
 
     /**
@@ -56,10 +70,17 @@ public class Line
      * @param   y   description of parameter y
      * @return  description of the return value
      */
-    public void rotate()
+    public Boolean rotate(Boolean mode)
     {
         // put your code here
-        Graphics2D g2d=(Graphics 2D) g2
+        if (mode==true){
+            mode=false;
+        }
+        else{
+            mode=true;
+        }
+       
+        return mode;
     }
 
 }
