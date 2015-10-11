@@ -11,14 +11,18 @@ import java.awt.GradientPaint;
  */
 public class Background
 {
-    /** description of instance variable x (add comment for each instance variable) */
+    /** width of the frame */
     private int  w;
+    /** height of the frame */
     private int  h;
+    /** variable that reprents the fraction 1/3 */
     private final float  ONE_THIRD=(float)1.0/3;
+    /** variable that reprents the fraction 2/3 */
     private final float TWO_THIRD=(float)2.0/3;
+    /** variable that reprents the fraction 3/4 */
     private final float THREE_FOURTH=(float)3.0/4;
     /**
-     * Default constructor for objects of class Background
+     *Constructor for Background class that specifies the width and height of the rectangle that the background should fill
      */
     public Background()
     {
@@ -30,15 +34,12 @@ public class Background
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     *    that describes the operation of the method
+     * Draws the gradient background of the frame
      *
-     * @pre        preconditions for the method
-     *            (what the method assumes about the method's parameters and class's state)
-     * @post    postconditions for the method
-     *            (what the method guarantees upon completion)
-     * @param    y    description of parameter y
-     * @return    description of the return value
+     *
+     * @post    will draw the background
+     * @param     provides graphics context
+     *  
      */
     public void draw(Graphics2D g2)
     {

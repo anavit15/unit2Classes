@@ -4,7 +4,7 @@ import java.awt.geom.Point2D;
 import java.awt.Color;
 import java.awt.*;
 /**
- * Creates the center of the ferris wheel
+ * Creates a line
  * 
  * Anavi Tekriwal 
  * October 5, 2015
@@ -12,26 +12,21 @@ import java.awt.*;
 public class Line
 {
     // instance variables - replace the example below with your own
+   /** X coordinate of the first point of the line */
    private int x1;
+   /** Y coordinate of the first point of the line*/
    private int y1;
+   /** X coordinate of the second point of the line */
    private int x2;
+   /** Y coordinate of the second point of the line*/
    private int y2;
+   /** width of the line*/
    private float penWidth;
-   private Line line1;
-    private Line line2;
-    private Line line3;
-    private Line line4;
-    private Building car1;
-    private Building car2;
-    private Building car3;
-    private Building car4;
-    private Building car5;
-    private Building car6;
-    private Building car7;
-    private Building car8;
-    private Boolean mode;
+   
+   
+ 
     /**
-     * Constructor for objects of class FilledCircle
+     * Constructor for objects of class FilledCircle that specifies the coordinates of the two points that make up the line and the width of the line
      */
     public Line(int x1,int y1, int x2, int y2,int w)
     {
@@ -44,10 +39,10 @@ public class Line
     }
 
     /**
-     * An example of a method - replace this comment with your own
+     * Draws a line
      * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
+     * @param    provides graphics context
+     * @post     draws a line
      */
     public void draw(Graphics2D g2)
     {
@@ -59,29 +54,7 @@ public class Line
         
     }
     
-    /**
-     * An example of a method - replace this comment with your own
-     *  that describes the operation of the method
-     *
-     * @pre     preconditions for the method
-     *          (what the method assumes about the method's parameters and class's state)
-     * @post    postconditions for the method
-     *          (what the method guarantees upon completion)
-     * @param   y   description of parameter y
-     * @return  description of the return value
-     */
-    public Boolean rotate(Boolean mode)
-    {
-        // put your code here
-        if (mode==true){
-            mode=false;
-        }
-        else{
-            mode=true;
-        }
-       
-        return mode;
-    }
+    
 
 }
 

@@ -19,7 +19,7 @@ public class Building extends Background
     private int yHeight;
 
     /**
-     * Constructor for object of class Building1 that specify the location of the building
+     * Constructor for object of class Building that specify the location of the building
      */
     public Building(int x, int y,int w,int h)
     {
@@ -31,13 +31,12 @@ public class Building extends Background
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     *    that describes the operation of the method
+     * Draws a rectangle 
      *
      * @pre        xLeft and yTop must be ints
+     * @post        draws a rectangle
     
-     * @param   xLeft   the x coordinate of the top left corner of the building
-     *          yTop    the y coordinate of the top left corner of the building
+     * @param   provides graphics context
 
      */
     public void draw(Graphics2D g2)

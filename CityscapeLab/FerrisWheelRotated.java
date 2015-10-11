@@ -2,7 +2,7 @@ import java.awt.Graphics2D;
 import java.awt.Color;
 
 /**
- * Write a description of class FerrisWheel here.
+ * Draws a rotated ferris wheel
  * 
  * @author (your name) 
  * @version (a version number or a date)
@@ -10,23 +10,36 @@ import java.awt.Color;
 public class FerrisWheelRotated
 {
     /** description of instance variable x (add comment for each instance variable) */
-    private Line line1;
-    private Line line2;
-    private Line line3;
+    /** first line*/
+   private Line line1;
+   /** second line*/
+   private Line line2;
+   /** third line*/
+   private Line line3;
+   /** fourth line*/
     private Line line4;
-    private Building car1;
-    private Building car2;
-    private Building car3;
-    private Building car4;
-    private Building car5;
-    private Building car6;
-    private Building car7;
-    private Building car8;
+   /** car 1 on the ferris wheel*/
+   private Building car1;
+   /** car 2 on the ferris wheel*/
+   private Building car2; 
+   /** car 3 on the ferris wheel*/
+   private Building car3;
+   /** car 4 on the ferris wheel*/
+   private Building car4;
+   /** car 5 on the ferris wheel*/
+   private Building car5;
+   /** car 6 on the ferris wheel*/
+   private Building car6;
+   /** car 7 on the ferris wheel*/
+   private Building car7;
+   /** car 8 on the ferris wheel*/
+   private Building car8;
+   /** describes which mode the ferris wheel is in (rotated or not)*/
     private Boolean mode;
     
     
     /**
-     * Default constructor for objects of class FerrisWheel
+     * Default constructor for objects of class FerrisWheelRotated that specifies where the lines and cars should be
      */
     public FerrisWheelRotated()
     {
@@ -49,27 +62,23 @@ public class FerrisWheelRotated
         
 }
      /**
-  * An example of a method - replace this comment with your own
-     *    that describes the operation of the method
-     *
-     * @pre        preconditions for the method
-     *            (what the method assumes about the method's parameters and class's state)
-     * @post    postconditions for the method
-     *            (what the method guarantees upon completion)
-     * @param    y    description of parameter y
-     * @return    description of the return value
+  * Draws the ferris wheel in its rotated mode using the Line and Building classes
+    
+     * @post    draws a rotated ferris wheel
+     * @param    provides graphics context
+   
      */
     public void draw (Graphics2D g2)
     {
         // put your code here
         
         
-        LineReflection leftPillarReflection=new LineReflection (1020,745, 950, 475, 15);
+        /*LineReflection leftPillarReflection=new LineReflection (1020,745, 950, 475, 15);
         leftPillarReflection.draw(g2);
         LineReflection bottomPillarReflection=new LineReflection (950,475, 1090, 475, 15);
         bottomPillarReflection.draw(g2);
         LineReflection rightPillarReflection=new LineReflection (1020,745, 1090, 475, 15);
-        rightPillarReflection.draw(g2);
+        rightPillarReflection.draw(g2);*/
         
         Line leftPillar=new Line (1020,265, 950, 475, 15);
         leftPillar.draw(g2);
@@ -120,23 +129,5 @@ public class FerrisWheelRotated
         Circle wheelCenter=new Circle(10,1000,240);
         wheelCenter.draw(g2);
     }
-/**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y
-     */
-    public Boolean rotate ()
-    {
-        // put your code here
-     
-        if (this.mode==false){
-            this.mode=true;
-        }else {
-            this.mode=false;
-    }
-    
-    return this.mode;
-}
 
 }

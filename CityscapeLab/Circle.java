@@ -10,13 +10,15 @@ import java.awt.*;
  */
 public class Circle
 {
-    // instance variables - replace the example below with your own
+    /** Radius of the circle */
    private double radius;
+   /** X coordinate of the circle */
    private int x;
+   /** Y coordinate of the circle */
    private int y;
 
     /**
-     * Constructor for objects of class FilledCircle
+     * Constructor for objects of class Circle that specifies radius and location
      */
     public Circle(double radius, int cx, int cy)
     {
@@ -26,10 +28,10 @@ public class Circle
     }
 
     /**
-     * An example of a method - replace this comment with your own
+     * Creates cricles using the ellipse class
      * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
+     * @param  provides graphics context
+     * @post     draws a circle
      */
     public void draw(Graphics2D g2)
     {

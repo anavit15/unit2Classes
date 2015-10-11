@@ -5,12 +5,12 @@ import java.awt.*;
 import java.applet.*;
 
 /**
- * Creates a tiered rectangle building 
+ * Creates a traingle
  * 
  * Anavi Tekriwal 
  * @October 5
  */
-public class Triangle extends Applet
+public class Triangle 
 {
     /** Location of the top left x coordinate of the building */
     private int xLeft;
@@ -23,7 +23,7 @@ public class Triangle extends Applet
 
 
     /**
-     * Constructor for object of class Building2 that specify the location of the building
+     * Constructor for object of class Triangle that specifies the location of the triangle and the size
      */
     public Triangle(int x, int y, int w, int h)
     {
@@ -35,13 +35,11 @@ public class Triangle extends Applet
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     *    that describes the operation of the method
+     * Draws a triangle
      *
-     * @pre        xLeft and yTop must be ints
+     * @post        draws a fileld in triangle
     
-     * @param   xLeft   the x coordinate of the top left corner of the building
-     *          yTop    the y coordinate of the top left corner of the building
+     * @param   provides graphics context
 
      */
     public void draw(Graphics g)

@@ -3,10 +3,10 @@ import java.awt.geom.Ellipse2D;
 import java.awt.Color;
 import java.awt.*;
 /**
- * Write a description of class Moon here.
+ * Draws a moon
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @Anavi Tekriwal 
+ * @October 9,2015
  */
 public class Moon
 {
@@ -17,7 +17,7 @@ public class Moon
     private int yTop;
 
     /**
-     * Constructor for objects of class Moon
+     * Constructor for objects of class Moon that specifies the location of the object
      */
     public Moon(int x, int y)
     {
@@ -27,10 +27,9 @@ public class Moon
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
+     * Draws the moon
+     * @param  provides graphics context
+       * @post    draws a moon
      */
     public void draw(Graphics2D g2)
     {

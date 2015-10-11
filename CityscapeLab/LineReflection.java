@@ -4,7 +4,7 @@ import java.awt.geom.Point2D;
 import java.awt.Color;
 import java.awt.*;
 /**
- * Creates the center of the ferris wheel
+ * Creates a line
  * 
  * Anavi Tekriwal 
  * October 5, 2015
@@ -18,7 +18,7 @@ public class LineReflection
    private int y2;
    private float penWidth;
     /**
-     * Constructor for objects of class FilledCircle
+     *Constructor for objects of class FilledCircle that specifies the coordinates of the two points that make up the line and the width of the line
      */
     public LineReflection(int x1,int y1, int x2, int y2,int w)
     {
@@ -30,10 +30,10 @@ public class LineReflection
     }
 
     /**
-     * An example of a method - replace this comment with your own
+      Draws a line
      * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
+     * @param    provides graphics context
+     * @post     draws a line
      */
     public void draw(Graphics2D g2)
     {

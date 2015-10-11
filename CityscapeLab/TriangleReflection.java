@@ -10,7 +10,7 @@ import java.applet.*;
  * Anavi Tekriwal 
  * @October 5
  */
-public class TriangleReflection extends Applet
+public class TriangleReflection 
 {
     /** Location of the top left x coordinate of the building */
     private int xLeft;
@@ -23,7 +23,7 @@ public class TriangleReflection extends Applet
 
 
     /**
-     * Constructor for object of class Building2 that specify the location of the building
+     * Constructor for object of class TriangleReflection that specifies the size and location of the triangle
      */
     public TriangleReflection(int x, int y, int w, int h)
     {
@@ -35,13 +35,11 @@ public class TriangleReflection extends Applet
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     *    that describes the operation of the method
+     * Draws a reflected triangle
      *
-     * @pre        xLeft and yTop must be ints
+     * @post        draws an upside down triangle that is less opaque
     
-     * @param   xLeft   the x coordinate of the top left corner of the building
-     *          yTop    the y coordinate of the top left corner of the building
+     * @param   provides graphics context
 
      */
     public void draw(Graphics g)

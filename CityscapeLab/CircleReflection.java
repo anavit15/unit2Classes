@@ -3,7 +3,7 @@ import java.awt.geom.Ellipse2D;
 import java.awt.Color;
 import java.awt.*;
 /**
- * Creates the center of the ferris wheel
+ * Creates the reflected center of the ferris wheel
  * 
  * Anavi Tekriwal 
  * October 5, 2015
@@ -11,12 +11,14 @@ import java.awt.*;
 public class CircleReflection
 {
     // instance variables - replace the example below with your own
+    /** Radius of the circle */
    private double radius;
+   /** X coordinate of the circle */
    private int x;
+   /** Y coordinate of the circle */
    private int y;
-
     /**
-     * Constructor for objects of class FilledCircle
+     * Constructor for objects of class CircleReflection that specifies the location and size of the circle
      */
     public CircleReflection(double radius, int cx, int cy)
     {
@@ -25,11 +27,10 @@ public class CircleReflection
         this.y=cy;
     }
 
-    /**
-     * An example of a method - replace this comment with your own
+    /**  * Creates reflected cricles using the ellipse class
      * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
+     * @param  provides graphics context
+     * @post     draws a reflected circle (less opaque)
      */
     public void draw(Graphics2D g2)
     {

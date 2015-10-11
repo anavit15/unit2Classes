@@ -10,6 +10,7 @@ public class CityscapeViewer
 {
     // the cityscape will be animated for 60 seconds
     static final int ANIMATION_TIME_IN_SECONDS = 60;
+    //static private int moonAppearance;
    
     /**
      * main method for the program which creates and configures the frame for the program
@@ -26,19 +27,16 @@ public class CityscapeViewer
         
         // use the Scanner class to prompt the user for some configurable aspect of the cityscape
         // ...
-        /*System.out.println("Is it cloudy (yes or no): ");
+        System.out.println("Is the moon out(yes or no): ");
         Scanner input=new Scanner(System.in);
         String answer=input.next();
         int answerValue=answer.indexOf("yes");
-        if (answerValue==1){
-            moon.draw();
-        }else{
-            
-        }
-        */
+        
+        
+        
         
         // a frame contains a single component; create the Cityscape component and add it to the frame
-        CityscapeComponent component = new CityscapeComponent( /* pass the user-specified value */ );
+        CityscapeComponent component = new CityscapeComponent(answerValue );
         frame.add(component);
         
         // make the frame visible which will result in the paintComponent method being invoked on the

@@ -13,28 +13,27 @@ import javax.swing.JComponent;
  */
 public class CityscapeComponent extends JComponent
 {
-    // define the objects in your Cityscape as instance variables
-    // ...
-    
-    // define the CityscapeComponent contructor and intiailize all instance variables
-    // ...
+   /** ferris wheel object */
    private FerrisWheel ferrisWheel;
+   /** ferris wheel rotated object */
    private FerrisWheelRotated ferrisWheelR;
-   private Shadow eclipse;
+   /** saves the user input in an variable */
+   private int moonState;
    //private Boolean mode;
 
     /**
      * Constructor for object of class Building1 that specify the location of the building
      */
-    public CityscapeComponent()
+    public CityscapeComponent(int answerValue)
     {
         // initialise instance variables
        
         this.ferrisWheel=new FerrisWheel();
         this.ferrisWheelR=new FerrisWheelRotated();
-        this.eclipse=new Shadow(100,50);
+        //this.eclipse=new Shadow(100,50);
        //this.mode=this.ferrisWheelR.rotate();
-        
+        //this.moonState=moonAppearance;
+        this.moonState=answerValue;
 
     /**
      * This method is invoked by the Java Run-Time whenever the component needs to be redrawn.
@@ -125,24 +124,22 @@ public class CityscapeComponent extends JComponent
         
         this.ferrisWheel.draw(g2);
         
-        //Moon moon=new Moon(50,50);
-        //moon.draw(g2);
+        if (this.moonState==0){
+            Moon moon=new Moon(50,50);
+            moon.draw(g2);
+        }
         
         
-        this.eclipse.draw(g2);
-      
-        //ferrisWheelR.draw(g2);
+        //if (this.moonState==true){
+        
+    }
         
         
-        /*if (this.mode==false){
-            this.ferrisWheel.draw(g2);
-        }else {
-            this.ferrisWheelR.draw(g2);
-        }*/
+        
         
        
         
-}
+
     
 /**
      * Animate the cityscape by updating the objects such that they appear to be animated when they are next drawn.
@@ -150,13 +147,9 @@ public class CityscapeComponent extends JComponent
      */
     public void nextFrame()
     {
-        // update the objects in the cityscape so they are animated
-       // 
-       this.eclipse.move();
-       
        
         // request that the Java Runtime repaints this component by invoking its paintComponent method
-        
+        repaint();
        
     }
 

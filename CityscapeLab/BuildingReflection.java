@@ -3,10 +3,10 @@ import java.awt.Graphics2D;
 import java.awt.Color;
 import java.awt.Transparency;
 /**
- * Write a description of class Bulding here.
+ * Creates a reflected building
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Anavi Tekriwal
+ * @version October 9,2015
  */
 public class BuildingReflection extends Background
 {
@@ -19,7 +19,7 @@ public class BuildingReflection extends Background
     /** Height of the Building */
     private int yHeight;
     /**
-     * Default constructor for objects of class Bulding
+     * Constructor of class BuldingReflection that specifies the location and size of the building
      */
     public BuildingReflection(int x, int y,int w,int h)
     {
@@ -32,19 +32,16 @@ public class BuildingReflection extends Background
     
 
     /**
-     * An example of a method - replace this comment with your own
-     *    that describes the operation of the method
+     * Draws a rectangle that is reflected on the water
      *
-     * @pre        preconditions for the method
-     *            (what the method assumes about the method's parameters and class's state)
-     * @post    postconditions for the method
-     *            (what the method guarantees upon completion)
-     * @param    y    description of parameter y
-     * @return    description of the return value
+     * @pre        xLeft and yTop must be ints
+     * @post        draws a rectangle
+    
+     * @param   provides graphics context
      */
     public void draw(Graphics2D g2)
     {
-        // put your code here
+        
         Color color =new Color(140,140, 140, 100);//lighter black
         g2.setColor(color);
         Rectangle building=new Rectangle ( xLeft,yTop,xWidth,yHeight);
